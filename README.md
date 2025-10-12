@@ -3,8 +3,8 @@ fastest jit compiler in python, because tcc makes it compile in like, a few mill
 # License
 It's Licensed under WTFPL v3 (a custom version of WTFPL made by the creator of SimplerJIT), because, why not?
 ## Credits
-Fabrice Bellard --- for making TCC
-Intiha/Gund4422 (aka me) --- for making SimplerJIT
+- Fabrice Bellard --- for making TCC
+- Intiha/Gund4422 (aka me) --- for making SimplerJIT
 ## Q&A
 - What machine was this made on?
 - ANS: Windows, because tcc.exe duh

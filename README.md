@@ -10,3 +10,6 @@ It's Licensed under WTFPL v3 (a custom version of WTFPL made by the creator of S
 - ANS: Windows, because tcc.exe duh
 2. What compiler do you like?
 - Ans: TCC, obviously u dumbolumbo
+**3 billion hours later**
+2147483647. What quantam vontumlontumdontum do you like? (joke)
+- Ans: the billionth one called braivcmewskdajmaw

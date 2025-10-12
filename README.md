@@ -1,2 +1,2 @@
 # SimplerJIT
-Simple JIT compiler in python, SIMD vectorization and TCC
+fastest jit compiler in python, because tcc to compile in like, a few milliseconds, and also python func to SIMD C transpiler

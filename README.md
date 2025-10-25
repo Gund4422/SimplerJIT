@@ -1,30 +1,66 @@
 # SimplerJIT
-Fastest JIT compiler in Python — because TCC compiles in like, a few milliseconds.  
-Also includes a Python → SIMD C transpiler. Yeah, it’s that fast.
 
----
+**SimplerJIT** (`@sjit`) is a lightweight Python Just-In-Time (JIT) compiler that converts Python functions to C using TinyCC (TCC) for blazing-fast execution. It’s designed for **local builds**, caching, and easy experimentation with multiple optimization strategies.
 
-## 🧾 License
-Licensed under **WTFPL v3** (a custom version made by the creator of SimplerJIT),  
-because... why not?
+## Features
 
----
+* **Python → C Compilation:** Converts Python functions to C code for fast execution.
+* **Caching Support:** Optionally cache compiled binaries for repeated use.
+* **Local Installation:** No PyPI; install and use directly on your machine.
+* **Minimal Dependencies:** Only requires Python 3.x and TCC (auto-downloadable).
 
-## 🧠 Credits
-- **Fabrice Bellard** — for making TCC (the real goat)
-- **Intiha / Gund4422 (aka me)** — for making SimplerJIT
+## Installation
 
----
+Clone the repo and install in editable mode:
 
-## ❓ Q&A
+```bash
+git clone <repo-url>
+cd SimplerJIT
+pip install -e .
+```
 
-1. **What machine was this made on?**  
-   - ANS: Windows, because tcc.exe duh  
+This allows you to modify SimplerJIT locally and test changes immediately.
 
-2. **What compiler do you like?**  
-   - Ans: TCC, obviously u dumbolumbo  
+## Usage
 
-**3 billion hours later...**  
+### Basic Example
 
-2147483647. **What quantum vontumlontumdontum do you like?** (joke)  
-   - Ans: the billionth one called *braivcmewskdajmaw*  
+```python
+from simplerjit import sjit
+
+@sjit(cache=True)
+def compute():
+    result = 0
+    for i in range(10_000_000):
+        result += i
+    return result
+
+print(compute())
+```
+
+### Notes
+
+* Only **positional arguments** are supported.
+* Functions are automatically converted to C and executed via TCC.
+* Caching speeds up repeated executions.
+
+### Advanced: Custom Version / Loop Unrolling
+
+SimplerJIT supports aggressive **32× loop unrolling** and uses `long double` internally for high-precision arithmetic.
+
+```python
+@sjit(cache=True)
+def sum_squares(n):
+    result = 0
+    for i in range(n):
+        result += i*i
+    return result
+```
+
+## Contributing
+
+Fork, tweak, and submit pull requests! Performance improvements, bug fixes, and new JIT features are welcome.
+
+## License
+
+GPL v3 License. See `LICENSE` for details.

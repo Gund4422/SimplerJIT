@@ -14,7 +14,7 @@
 Clone the repo and install in editable mode:
 
 ```bash
-git clone <repo-url>
+git clone github.com/Gund4422/SimplerJIT.git
 cd SimplerJIT
 pip install -e .
 ```

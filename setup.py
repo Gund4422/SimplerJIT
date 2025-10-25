@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="SimplerJIT",
-    version="0.1.0",
+    version="0.2.0",
     description="Ultra-lightweight Python JIT using TCC and SIMD",
     author="Intiha",
     url="https://github.com/Gund4422/SimplerJIT",
@@ -11,10 +11,7 @@ setup(
     install_requires=[
         "numpy>=1.21"
     ],
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: WTFPL",
-    ],
     include_package_data=True,
 )
+
 

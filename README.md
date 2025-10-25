@@ -26,16 +26,46 @@ This allows you to modify SimplerJIT locally and test changes immediately.
 ### Basic Example
 
 ```python
+import time
 from simplerjit import sjit
 
+# --- SimplerJIT version ---
 @sjit(cache=True)
-def compute():
-    result = 0
-    for i in range(10_000_000):
-        result += i
-    return result
+def count_to_sjit(n):
+    x = 0
+    for i in range(n):
+        x += 1
+    return x
 
-print(compute())
+# --- Pure Python version ---
+def count_to_py(n):
+    x = 0
+    for i in range(n):
+        x += 1
+    return x
+
+N = 248_669_921
+
+print(f"Counting to {N:,}...\n")
+
+# --- SJIT run ---
+start = time.time()
+sjit_result = count_to_sjit(N)
+sjit_elapsed = time.time() - start
+
+# --- Python run ---
+start = time.time()
+py_result = count_to_py(N)
+py_elapsed = time.time() - start
+
+# --- Compare ---
+print(f"SimplerJIT Result: {sjit_result}")
+print(f"SimplerJIT Time:   {sjit_elapsed:.6f} sec")
+print(f"Python Result:     {py_result}")
+print(f"Python Time:       {py_elapsed:.6f} sec")
+
+speedup = py_elapsed / sjit_elapsed if sjit_elapsed > 0 else 0
+print(f"\nSpeedup: {speedup:.2f}x faster")
 ```
 
 ### Notes

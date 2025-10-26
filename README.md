@@ -7,11 +7,11 @@
 ## Features
 
 * **The `@sjit` decorator** compiles the target Python function into native C code on first run, then executes the compiled binary directly.
-* **TCC auto-download:** If TCC is not found at your home path
+* **TCC auto-download:** If TCC is not found, SimplerJIT can automatically download and configure it for you. 
 * **Python → C Compilation:** Converts Python functions to C code for fast execution.
 * **Caching Support:** Optionally cache compiled binaries for repeated use.
 * **Local Installation:** No PyPI; install and use directly on your machine.
-* **Minimal Dependencies:** Only requires Python 3.x and TCC (auto-downloadable).
+* **Minimal Dependencies:** Only requires Python 3.8+, TCC (auto-downloadable) and also Windows 64 bit. (we dont suport actual Linux and windows 32 bit yet!
 
 ## Installation
 

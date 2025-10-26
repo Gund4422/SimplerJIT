@@ -11,7 +11,7 @@
 * **Python → C Compilation:** Converts Python functions to C code for fast execution.
 * **Caching Support:** Optionally cache compiled binaries for repeated use.
 * **Local Installation:** No PyPI; install and use directly on your machine.
-* **Minimal Dependencies:** Only requires Python 3.8+, TCC (auto-downloadable) and also Windows 64 bit. (we dont suport actual Linux and windows 32 bit yet!
+* **Minimal Dependencies:** Only requires Python 3.8+, TCC (auto-downloadable) and also Windows 64 bit. (we dont support actual Linux and windows 32 bit yet!)
 
 ## Installation
 

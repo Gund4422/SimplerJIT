@@ -116,7 +116,7 @@ int main() {{
 
     try:
         if cache:
-            subprocess.check_call([tcc_path, "-o", str(exe_path), c_path])
+            subprocess.check_call([tcc_path, "-o", str(exe_path), c_path "-O2"])
             result = subprocess.check_output([str(exe_path)], universal_newlines=True).strip()
         else:
             result = subprocess.check_output([tcc_path, "-run", c_path "-O2"], universal_newlines=True).strip()
@@ -134,3 +134,4 @@ def sjit(_func=None, *, cache=False):
         return decorator
     else:
         return decorator(_func)
+

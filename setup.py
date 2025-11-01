@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="SimplerJIT",
-    version="0.2.0",
+    version="2.6",
     description="Ultra-lightweight Python JIT using TCC and SIMD",
     author="Intiha",
     url="https://github.com/Gund4422/SimplerJIT",
@@ -13,5 +13,6 @@ setup(
     ],
     include_package_data=True,
 )
+
 
 

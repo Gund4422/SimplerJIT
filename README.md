@@ -27,7 +27,7 @@ This allows you to modify SimplerJIT locally and test changes immediately.
 
 ## Usage
 
-### Basic Example
+### Basic Example (Note: if tcc is not installed: it may be slower)
 
 ```python
 import time

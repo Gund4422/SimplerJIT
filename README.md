@@ -1,5 +1,5 @@
 > **Disclaimer:** SimplerJIT is optimized for experimentation and learning — not a full production-grade JIT (yet!).
-
+> Current Version: 2.6
 # SimplerJIT
 
 **SimplerJIT** (`@sjit`) is a lightweight Python Just-In-Time (JIT) compiler that converts Python functions to C using TinyCC (TCC) for blazing-fast execution. It’s designed for **local builds**, caching, and easy experimentation with multiple optimization strategies.
@@ -11,8 +11,7 @@
 * **Python → C Compilation:** Converts Python functions to C code for fast execution.
 * **Caching Support:** Optionally cache compiled binaries for repeated use.
 * **Local Installation:** No PyPI; install and use directly on your machine.
-* **Minimal Dependencies:** Only requires Python 3.8+, TCC (auto-downloadable) and also Windows 64 bit. (we dont support actual Linux and windows 32 bit yet!)
-
+* **Minimal Dependencies:** Only requires Python 3.8+, TCC (auto-downloadable) and also Windows 64 bit, Windows 32 Bit OR linux.
 ## Installation
 
 Clone the repo and install in editable mode:
@@ -74,8 +73,6 @@ print(f"\nSpeedup: {speedup:.2f}x faster")
 
 ### Notes
 
-* Currently supported only on **Windows x64**.  
-* Linux and Win32 support are planned for future releases.
 * Only **positional arguments** are supported.
 * Functions are automatically converted to C and executed via TCC.
 * Caching speeds up repeated executions.
